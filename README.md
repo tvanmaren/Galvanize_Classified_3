@@ -20,12 +20,12 @@ You are responsible for:
 
 ### Must haves
 
-The app should do the following
+The app should implement the following:
 
-- Valid well implemented HTML and CSS
+- Valid, well-implemented HTML and CSS
 - Readable and logical JavaScript
-- Responsive for different screen sizes and orientations
-- Have a logical and intuitive UI 
+- Responsiveness for different screen sizes and orientations
+- A logical and intuitive UI 
 
 # Tips
 
