@@ -8,7 +8,7 @@ Now is your time to show off and make your Angular app pretty.
 
 ### Getting Started
 
-Copy your files from **Part 2** into your project directory.  This is important - make sure you don't edit the part 2 files so we can evaluate each part independently.  This also allows you to redo pieces of this assessment individually.
+Copy your files from **Part 2** into your project directory.  This is important: make sure you don't edit the part 2 files so we can evaluate each part independently.  This also allows you to redo pieces of this assessment individually.
 
 ### Requirements
 
