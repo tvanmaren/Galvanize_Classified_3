@@ -8,7 +8,7 @@ This is a simple Angular front end for your Galvanize Classified API.  **Part 3 
 
 ### Getting Started
 
-Copy your files from **Part 1** into your project directory.  This is important - make sure you don't edit the part 1 files so we can evaluate each part independently.   This also allows you to redo pieces of this assessment individually.
+Copy your files from **Part 1** into your project directory.  This is important: make sure you don't edit the part 1 files so we can evaluate each part independently.   This also allows you to redo pieces of this assessment individually.
 
 ### Requirements
 
@@ -20,7 +20,7 @@ You are responsible for:
 
 ### Functionality
 
-The app should do the following
+The app should do the following:
 
 - Display all of the ads
 - Post a new ad
