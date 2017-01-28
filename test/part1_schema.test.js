@@ -45,7 +45,7 @@ suite('Part 1: Schema for classifieds should be built.', () => {
           },
 
           price: {
-            type: 'decimal',
+            type: 'numeric',
             maxLength: null,
             nullable: false,
             defaultValue: null
