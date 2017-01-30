@@ -27,18 +27,27 @@ router.get('/:id', (req, res, next) => {
 router.get('/', (req, res, next) => {
   // GET /classifieds should return the id,title, description, price and item_image of all classifieds.
   knex('classifieds')
-  .then((entries)=>{
-    entries.forEach((entry)=>{
-      delete entry.created_at;
-      delete entry.updated_at;
+    .then((entries) => {
+      entries.forEach((entry) => {
+        delete entry.created_at;
+        delete entry.updated_at;
+      });
+      res.json(entries);
     });
-    res.json(entries);
-  });
 
 });
 
 router.post('/', (req, res, next) => {
   // POST /classifieds should create a new ad and return the id, title, description, price and item_image that were created.
+  const newPost = req.body;
+  knex('classifieds')
+    .insert(newPost, '*')
+    .then((entries) => {
+      const entry=entries[0];
+      delete entry.created_at;
+      delete entry.updated_at;
+      res.json(entry);
+    });
 
 });
 
