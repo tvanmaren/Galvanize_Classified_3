@@ -6,7 +6,7 @@
     .component("adList", {
       controller: adListController,
       controllerAs: '$ctrl',
-      templateUrl: '/ads/adList.template.html',
+      templateUrl: '/ads/ad-list.template.html',
     });
 
   adListController.$inject = ['$state', 'adService'];
@@ -17,6 +17,7 @@
     vm.$onInit = onInit;
 
     function onInit() {
+      console.log(vm);
       adService.getAds().then((res) => {
         vm.adArray = res.data;
         console.log(vm.adArray);

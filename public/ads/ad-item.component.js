@@ -6,7 +6,7 @@
     .component("adItem", {
       controller: adItemController,
       controllerAs: '$ctrl',
-      templateUrl: '/ads/adItem.template.html',
+      templateUrl: '/ads/ad-item.template.html',
       bindings: {
         ad: '<',
       }

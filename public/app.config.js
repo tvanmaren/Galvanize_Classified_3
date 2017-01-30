@@ -11,13 +11,13 @@
 
     $stateProvider
       .state({
-        name: 'ads',
+        name: 'home',
         url: '/',
-        component: 'adList',
+        component: 'adList'
       })
       .state({
         name: 'ad',
-        url: 'classifieds/:id',
+        url: '/:id',
         component: 'adItem',
         params: {
           'id': '0'
@@ -25,12 +25,12 @@
       })
       .state({
         name: 'ad.new',
-        url: 'classifieds/new',
+        url: '/new',
         component: 'adNew',
       })
       .state({
         name: 'ad.edit',
-        url: 'classifieds/:id/edit',
+        url: '/:id/edit',
         component: 'adEditor',
         params: {
           'id': '0'

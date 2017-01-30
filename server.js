@@ -15,7 +15,7 @@ app.use('/angular', express.static(path.join(__dirname, '/node_modules/angular/a
 app.use('/angular-ui-router', express.static(path.join(__dirname, '/node_modules/angular-ui-router/release/angular-ui-router.min.js')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('*', (req, res, next) => {
+app.use('*', (req, res) => {
   res.sendFile('index.html', {
     root: path.join(__dirname, 'public')
   });
