@@ -8,9 +8,11 @@ const bodyParser = require('body-parser');
 const messages = require('./routes/classifieds');
 
 app.use(bodyParser.json());
-app.use(express.static('node_modules/angular'));
-app.use(express.static('public'));
+
 app.use('/classifieds', messages);
+
+app.use('/angular', express.static(path.join(__dirname, '/node_modules/angular/angular.min.js')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('*', (req, res, next) => {
   res.sendFile('index.html', {
