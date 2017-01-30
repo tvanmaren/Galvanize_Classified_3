@@ -13,40 +13,40 @@ const knex = require('../knex');
 
 router.get('/:id', (req, res, next) => {
   // GET /classifieds/:id should return the id,title, description, price and item_image of a single ad.
-  const id = parseInt(req.params.id);
+  const adId = parseInt(req.params.id);
   knex('classifieds')
-    .where('classifieds.id', id)
+    .where('classifieds.id', adId)
     .first()
-    .then((entry) => {
-      delete entry.created_at;
-      delete entry.updated_at;
-      res.json(entry);
+    .then((ad) => {
+      delete ad.created_at;
+      delete ad.updated_at;
+      res.json(ad);
     });
 });
 
 router.get('/', (req, res, next) => {
   // GET /classifieds should return the id,title, description, price and item_image of all classifieds.
   knex('classifieds')
-    .then((entries) => {
-      entries.forEach((entry) => {
-        delete entry.created_at;
-        delete entry.updated_at;
+    .then((ads) => {
+      ads.forEach((ad) => {
+        delete ad.created_at;
+        delete ad.updated_at;
       });
-      res.json(entries);
+      res.json(ads);
     });
 
 });
 
 router.post('/', (req, res, next) => {
   // POST /classifieds should create a new ad and return the id, title, description, price and item_image that were created.
-  const newPost = req.body;
+  const newAd = req.body;
   knex('classifieds')
-    .insert(newPost, '*')
-    .then((entries) => {
-      const entry = entries[0];
-      delete entry.created_at;
-      delete entry.updated_at;
-      res.json(entry);
+    .insert(newAd, '*')
+    .then((ads) => {
+      const ad = ads[0];
+      delete ad.created_at;
+      delete ad.updated_at;
+      res.json(ad);
     });
 
 });
@@ -54,20 +54,20 @@ router.post('/', (req, res, next) => {
 router.patch('/:id', (req, res, next) => {
   // PATCH /classifieds/:id should update an ad and return the id, title, description, price and item_image that were updated.
   const newData = req.body;
-  const postId = parseInt(req.params.id);
+  const adId = parseInt(req.params.id);
   knex('classifieds')
-    .where('classifieds.id', postId)
+    .where('classifieds.id', adId)
     .first()
-    .then((entry) => {
-      if (entry) {
+    .then((ad) => {
+      if (ad) {
         knex('classifieds')
-          .where('classifieds.id', postId)
+          .where('classifieds.id', adId)
           .update(newData, '*')
-          .then((entries) => {
-            const entry = entries[0];
-            delete entry.created_at;
-            delete entry.updated_at;
-            res.json(entry);
+          .then((ads) => {
+            const ad = ads[0];
+            delete ad.created_at;
+            delete ad.updated_at;
+            res.json(ad);
           });
       } else {
         next();
@@ -77,8 +77,17 @@ router.patch('/:id', (req, res, next) => {
 
 router.delete('/:id', (req, res, next) => {
   // DELETE /classifieds/:id should delete an ad and return the id,title, description, price, and item_image that were deleted.
-  const id = req.params.id;
-
+  const adId = req.params.id;
+  knex('classifieds')
+    .where('classifieds.id', adId)
+    .del()
+    .returning('*')
+    .then((ads) => {
+      const ad = ads[0];
+      delete ad.created_at;
+      delete ad.updated_at;
+      res.json(ad);
+    });
 });
 
 module.exports = router;
