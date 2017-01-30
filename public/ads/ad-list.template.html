@@ -5,6 +5,6 @@
 <ul>
   <li ng-repeat="item in $ctrl.adArray | filter:$ctrl.keyword">
     <hr>
-    <ad-item item="item" delete-item="$ctrl.deleteItem"></ad-item>
+    <ad-item item="item" delete-item="$ctrl.deleteItem(id)"></ad-item>
   </li>
 </ul>

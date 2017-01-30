@@ -27,7 +27,7 @@
     }
 
     function deleteItem(itemId) {
-      return adService.deleteItem(itemId)
+      return adService.deleteAd(itemId)
         .then((item) => {
           vm.adArray = vm.adArray.filter((ad) => {
             return ad.id !== item.id;
