@@ -43,7 +43,7 @@ router.post('/', (req, res, next) => {
   knex('classifieds')
     .insert(newPost, '*')
     .then((entries) => {
-      const entry=entries[0];
+      const entry = entries[0];
       delete entry.created_at;
       delete entry.updated_at;
       res.json(entry);
@@ -51,9 +51,28 @@ router.post('/', (req, res, next) => {
 
 });
 
-router.patch('/', (req, res, next) => {
+router.patch('/:id', (req, res, next) => {
   // PATCH /classifieds/:id should update an ad and return the id, title, description, price and item_image that were updated.
-
+  const newData = req.body;
+  const postId = parseInt(req.params.id);
+  knex('classifieds')
+    .where('classifieds.id', postId)
+    .first()
+    .then((entry) => {
+      if (entry) {
+        knex('classifieds')
+          .where('classifieds.id', postId)
+          .update(newData, '*')
+          .then((entries) => {
+            const entry = entries[0];
+            delete entry.created_at;
+            delete entry.updated_at;
+            res.json(entry);
+          });
+      } else {
+        next();
+      }
+    });
 });
 
 router.delete('/:id', (req, res, next) => {
