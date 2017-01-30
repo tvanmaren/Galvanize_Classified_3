@@ -26,6 +26,14 @@ router.get('/:id', (req, res, next) => {
 
 router.get('/', (req, res, next) => {
   // GET /classifieds should return the id,title, description, price and item_image of all classifieds.
+  knex('classifieds')
+  .then((entries)=>{
+    entries.forEach((entry)=>{
+      delete entry.created_at;
+      delete entry.updated_at;
+    });
+    res.json(entries);
+  });
 
 });
 
