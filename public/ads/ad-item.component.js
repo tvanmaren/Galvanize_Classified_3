@@ -8,20 +8,21 @@
       controllerAs: '$ctrl',
       templateUrl: '/ads/ad-item.template.html',
       bindings: {
-        ad: '<',
+        item: '<',
+        deleteItem: '&',
       }
     });
 
-  adItemController.$inject = ['$state', 'adService'];
+  adItemController.$inject = ['$state'];
 
-  function adItemController($state, adService) {
+  function adItemController($state) {
     const vm = this;
 
     vm.editItem = editItem;
 
     function editItem() {
       $state.go('ad.edit', {
-        'id': vm.ad.id,
+        'id': vm.item.id,
       });
     }
 

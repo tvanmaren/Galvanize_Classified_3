@@ -7,6 +7,9 @@
       controller: adListController,
       controllerAs: '$ctrl',
       templateUrl: '/ads/ad-list.template.html',
+      bindings: {
+        adArray: '=',
+      }
     });
 
   adListController.$inject = ['$state', 'adService'];
@@ -24,6 +27,14 @@
       });
     }
 
+    function deleteItem(itemId) {
+      return adService.deleteItem(itemId)
+        .then((item) => {
+          vm.adArray = vm.adArray.filter((ad) => {
+            return ad.id !== item.id;
+          });
+        });
+    }
   }
 
 }());

@@ -1,19 +1,19 @@
 <div>
-  <img ng-src="{{ $ctrl.ad.item_image }}">
+  <img ng-src="{{ $ctrl.item.item_image }}">
 </div>
 <div>
-  <h2>{{ $ctrl.ad.title }}</h2>
+  <h2>{{ $ctrl.item.title }}</h2>
 </div>
 <div>
-  {{ $ctrl.ad.price }}
-</div>
-<br>
-<div>
-  <p>{{ $ctrl.ad.item_description }}</p>
+  {{ $ctrl.item.price }}
 </div>
 <br>
 <div>
-  <a ui-sref="item.edit({id: $ctrl.ad.id})">edit?</a>
+  <p>{{ $ctrl.item.item_description }}</p>
+</div>
+<br>
+<div>
+  <a ui-sref="ad.edit({id: $ctrl.item.id})">edit?</a>
 </div>
 <div>
   <a href="" ng-click="$ctrl.delItem()">delete?</a>

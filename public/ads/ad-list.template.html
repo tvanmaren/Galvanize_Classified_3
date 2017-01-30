@@ -3,8 +3,8 @@
 </h1>
 <ad-list-controls keyword="$ctrl.keyword"></ad-list-controls>
 <ul>
-  <li ng-repeat="ad in $ctrl.adArray">
+  <li ng-repeat="item in $ctrl.adArray">
     <hr>
-    <ad-item ad="ad"></ad-item>
+    <ad-item item="item" deleteItem="$ctrl.deleteItem"></ad-item>
   </li>
 </ul>
