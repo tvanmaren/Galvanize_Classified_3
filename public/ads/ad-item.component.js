@@ -3,7 +3,7 @@
 
   angular
     .module("app")
-    .component("adItem", {
+    .component('adItem', {
       controller: adItemController,
       controllerAs: '$ctrl',
       templateUrl: '/ads/ad-item.template.html',

@@ -19,7 +19,7 @@
     function getAds() {
       return $http.get('/classifieds')
         .then((ads) => {
-          service.adList = ads;
+          service.adList = ads.data;
           return service.adList;
         });
     }
@@ -27,7 +27,7 @@
     function getAd(adId) {
       return $http.get(`/classifieds/${adId}`)
         .then((ad) => {
-          service.currentAd = ad;
+          service.currentAd = ad.data;
           return service.currentAd;
         });
     }
@@ -35,7 +35,7 @@
     function newAd(data) {
       return $http.post('/classifieds', data)
         .then((ad) => {
-          service.currentAd = ad;
+          service.currentAd = ad.data;
           return service.currentAd;
         });
     }
@@ -43,7 +43,7 @@
     function updateAd(adId, data) {
       return $http.patch(`/classifieds/${adId}`, data)
         .then((ad) => {
-          service.currentAd = ad;
+          service.currentAd = ad.data;
           return service.currentAd;
         });
     }
@@ -51,7 +51,7 @@
     function deleteAd(adId) {
       return $http.delete(`/classifieds/${adId}`)
         .then((ad) => {
-          service.currentAd = ad;
+          service.currentAd = ad.data;
           return service.currentAd;
         });
     }

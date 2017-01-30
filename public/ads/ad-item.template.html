@@ -5,7 +5,7 @@
   <h2>{{ $ctrl.item.title }}</h2>
 </div>
 <div>
-  {{ $ctrl.item.price }}
+  ${{ $ctrl.item.price }}
 </div>
 <br>
 <div>
@@ -13,7 +13,7 @@
 </div>
 <br>
 <div>
-  <a ui-sref="ad.edit({id: $ctrl.item.id})">edit?</a>
+  <a ui-sref="ads.edit({id: $ctrl.item.id})">edit?</a>
 </div>
 <div>
   <a href="" ng-click="$ctrl.delItem()">delete?</a>
