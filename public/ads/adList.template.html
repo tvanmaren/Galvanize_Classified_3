@@ -1,6 +1,9 @@
 <h1>
   This is the Ad List
 </h1>
-<div ng-repeat="ad in $ctrl.adList">
-  <ad-item></ad-item>
-</div>
+<ad-list-controls></ad-list-controls>
+<table name="adList">
+  <tr ng-repeat="ad in $ctrl.adList">
+    <ad-item ad="ad"></ad-item>
+  </tr>
+</table>

@@ -11,14 +11,15 @@
 
   adListController.$inject = ['$state', 'adService'];
 
-  function adListController($state) {
+  function adListController($state, adService) {
     const vm = this;
 
     vm.$onInit = onInit;
 
     function onInit() {
-      adService.getAds().then((ads) => {
-        vm.adArray = ads;
+      adService.getAds().then((res) => {
+        vm.adArray = res.data;
+        console.log(vm.adArray);
       });
     }
 
