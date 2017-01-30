@@ -17,7 +17,6 @@
   function adItemController($state, adService) {
     const vm = this;
 
-    vm.$onInit = onInit;
     vm.editItem = editItem;
 
     function editItem() {
