@@ -19,7 +19,7 @@ gulp.task('nodemon', function (cb) {
   let started = false
 
   return nodemon({
-    script: './app/bin/www',
+    script: './server.js',
     ignore: [
       'test/',
       'public/',
