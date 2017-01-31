@@ -1,0 +1,20 @@
+<div>
+  <h2>{{ $ctrl.item.title }}</h2>
+</div>
+<div>
+  <img ng-src="{{ $ctrl.item.item_image }}">
+</div>
+<div>
+  ${{ $ctrl.item.price }}
+</div>
+<br>
+<div>
+  <p>{{ $ctrl.item.description }}</p>
+</div>
+<br>
+<div>
+  <a ui-sref="edit({id: $ctrl.item.id})">edit?</a>
+</div>
+<div>
+  <a href="" ng-click="$ctrl.deleteItem({id: $ctrl.item.id})">delete?</a>
+</div>
