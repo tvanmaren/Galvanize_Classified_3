@@ -55,7 +55,7 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
 }
 
 .grid-box {
-  height: 700px;
+  height: 600px;
   width: 400px;
 }
 
@@ -68,13 +68,12 @@ img {
 }
 
 .title {
-  min-height: 50px;
   min-width: 400px;
   overflow: scroll;
 }
 
 .description {
-  min-height: 175px;
+  min-height: 100px;
   min-width: 250px;
   overflow: scroll;
 }
@@ -82,4 +81,23 @@ img {
 /*Nav Menu*/
 .center {
   text-align: center;
+}
+
+.green {
+  background: rgba(28, 184, 65, .5);
+}
+
+/*Controls*/
+
+.controls {
+  margin-left: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.new-button {
+  margin-top: 20px;
+  margin-right: 20px;
 }
