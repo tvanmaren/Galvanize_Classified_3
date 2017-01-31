@@ -1,4 +1,10 @@
-/*Default Pure CSS styling*/
+/*Body Styles*/
+
+.back-gray {
+  background-color: rgba(208, 208, 208, 1);
+}
+
+/*Default Pure CSS styling (mostly grid)*/
 .l-box {
   padding: 1em;
 }
@@ -20,6 +26,9 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+/*Buttons*/
+
+
 .button-success {
   background: rgb(28, 184, 65);
   /* this is a green */
@@ -35,21 +44,17 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
   /* this is an orange */
 }
 
-.button-secondary {
-  background: rgb(66, 184, 221);
-  /* this is a light blue */
-}
-
-/*Custom Buttons*/
-
 .pure-button-disabled {
   background: rgba(66, 184, 221, .75);
 }
 
 /*Card Layout*/
 
+.light-gray {
+  background-color: rgba(100, 100, 100, .1);
+}
+
 .grid-box {
-  position:
   height: 700px;
   width: 400px;
 }
@@ -59,26 +64,22 @@ img {
   min-width: 200px;
   max-height: 400px;
   max-width: 300px;
+  overflow: hidden;
 }
 
 .title {
   min-height: 50px;
   min-width: 400px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .description {
-  min-height: 200px;
+  min-height: 175px;
   min-width: 250px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
-/*Background*/
-
-.light-gray {
-  background-color: rgba(100, 100, 100, .1);
-}
-
-.back-gray {
-  background-color: rgba(208, 208, 208, 1);
+/*Nav Menu*/
+.center {
+  text-align: center;
 }
