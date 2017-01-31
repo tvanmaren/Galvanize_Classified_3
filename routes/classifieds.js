@@ -20,8 +20,8 @@ router.get('/:id', (req, res, next) => {
       .first()
       .then((ad) => {
         if (ad) {
-          delete ad.created_at;
-          delete ad.updated_at;
+          // delete ad.created_at;
+          // delete ad.updated_at;
           res.json(ad);
         } else {
           next();
@@ -38,8 +38,8 @@ router.get('/', (req, res, next) => {
     .then((ads) => {
       if (ads.length !== 0) {
         ads.forEach((ad) => {
-          delete ad.created_at;
-          delete ad.updated_at;
+          // delete ad.created_at;
+          // delete ad.updated_at;
         });
         res.json(ads);
       } else {
@@ -57,8 +57,8 @@ router.post('/', (req, res, next) => {
       .insert(newAd, '*')
       .then((ads) => {
         const ad = ads[0];
-        delete ad.created_at;
-        delete ad.updated_at;
+        // delete ad.created_at;
+        // delete ad.updated_at;
         res.json(ad);
       });
   } else {
@@ -81,8 +81,8 @@ router.patch('/:id', (req, res, next) => {
           .update(newData, '*')
           .then((ads) => {
             const ad = ads[0];
-            delete ad.created_at;
-            delete ad.updated_at;
+            // delete ad.created_at;
+            // delete ad.updated_at;
             res.json(ad);
           });
       } else {
@@ -101,8 +101,8 @@ router.delete('/:id', (req, res, next) => {
     .then((ads) => {
       if (ads[0]) {
         const ad = ads[0];
-        delete ad.created_at;
-        delete ad.updated_at;
+        // delete ad.created_at;
+        // delete ad.updated_at;
         res.json(ad);
       } else {
         next();
