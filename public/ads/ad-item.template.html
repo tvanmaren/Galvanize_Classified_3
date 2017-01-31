@@ -1,13 +1,14 @@
 <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 back-gray grid-box">
   <h2 class="title">{{ $ctrl.item.title }}</h2>
-  <br>
+  <hr>
   <button class="pure-button-disabled">
       PRICE: ${{ $ctrl.item.price }}
     </button>
-  <img class="pure-img pure-u" ng-src="{{ $ctrl.item.item_image }}">
+  <hr>
+  <img class="pure-u" ng-src="{{ $ctrl.item.item_image }}">
   <br>
   <p class="description">{{ $ctrl.item.description }}</p>
-  <br>
+  <hr>
   <div class="pure-button-group" role="group">
     <a ui-sref="edit({id: $ctrl.item.id})" class="pure-button button-success"><i class="fa fa-cog fa-md"></i>EDIT</a>
     <a href="" ng-click="$ctrl.deleteItem({id: $ctrl.item.id})" class="pure-button button-error"><i class="fa fa-trash fa-md"></i>DELETE</a>

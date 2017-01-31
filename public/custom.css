@@ -49,10 +49,9 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
 /*Card Layout*/
 
 .grid-box {
-  min-height: 600px;
-  min-width: 400px;
-  max-height: 800px;
-  max-width: 400px;
+  position:
+  height: 700px;
+  width: 400px;
 }
 
 img {
@@ -65,10 +64,11 @@ img {
 .title {
   min-height: 50px;
   min-width: 400px;
+  overflow: hidden;
 }
 
 .description {
-  min-height: 100px;
+  min-height: 200px;
   min-width: 250px;
   overflow: hidden;
 }
