@@ -16,16 +16,17 @@
 
     vm.$onInit = onInit;
     vm.deleteItem = deleteItem;
+    vm.textFilter = textFilter;
 
     function onInit() {
       if (adService.adList) {
         vm.adArray = adService.adList;
-        console.log('local ads:',vm.adArray);
+        console.log('local ads:', vm.adArray);
       } else {
         adService.getAds()
           .then((ads) => {
             vm.adArray = ads;
-            console.log('ads retrieved:',vm.adArray);
+            console.log('ads retrieved:', vm.adArray);
           });
       }
     }
@@ -37,6 +38,16 @@
             return ad.id !== item.id;
           });
         });
+    }
+
+    function textFilter(item) {
+      if (!vm.keyword) {
+        return true;
+      } else if (item.title.includes(vm.keyword) || item.description.includes(vm.keyword)) {
+        return true;
+      } else {
+        return false;
+      }
     }
   }
 

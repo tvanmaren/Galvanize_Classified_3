@@ -23,10 +23,8 @@
         vm.currentAd = adService.adList.filter((ad) => {
           return (ad.id === adId);
         })[0];
-        console.log('ad retrieved:', vm.currentAd);
       } else {
         adService.getAd(adId).then((ad) => {
-          console.log('ad retrieved:', ad);
           vm.currentAd = ad;
         });
       }
