@@ -18,15 +18,15 @@
     vm.updateAd = updateAd;
 
     function onInit() {
-      const adId=parseInt($stateParams.id);
+      const adId = parseInt($stateParams.id);
       if (adService.adList) {
         vm.currentAd = adService.adList.filter((ad) => {
           return (ad.id === adId);
         })[0];
-        console.log('ad retrieved:',vm.currentAd);
+        console.log('ad retrieved:', vm.currentAd);
       } else {
         adService.getAd(adId).then((ad) => {
-          console.log('ad retrieved:',ad);
+          console.log('ad retrieved:', ad);
           vm.currentAd = ad;
         });
       }
@@ -35,12 +35,7 @@
     function updateAd() {
       return adService
         .updateAd($stateParams.id, vm.currentAd)
-        .then((updatedAd) => {
-          adService.adList = adService.adList.map((currentAd) => {
-            if (currentAd.id === updatedAd.id) {
-              currentAd = updatedAd;
-            }
-          });
+        .then(() => {
           $state.go('ads');
         });
     }

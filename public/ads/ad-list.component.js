@@ -18,12 +18,16 @@
     vm.deleteItem = deleteItem;
 
     function onInit() {
-      console.log(vm);
-      adService.getAds()
-        .then((ads) => {
-          vm.adArray = ads;
-          console.log(vm.adArray);
-        });
+      if (adService.adList) {
+        vm.adArray = adService.adList;
+        console.log('local ads:',vm.adArray);
+      } else {
+        adService.getAds()
+          .then((ads) => {
+            vm.adArray = ads;
+            console.log('ads retrieved:',vm.adArray);
+          });
+      }
     }
 
     function deleteItem(itemId) {
