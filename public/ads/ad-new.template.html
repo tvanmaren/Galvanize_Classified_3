@@ -4,15 +4,15 @@
 <br>
 <form class="pure-form" name="newAd" id="newAd" ng-submit="$ctrl.makeAd()">
   <fieldset class="pure-group">
-  <label for="title">Title:</label><input class="pure-input-2-3" type="text" id="title" ng-model="$ctrl.newAd.title">
-  <label for="description">Description:</label><textarea class="pure-input-2-3" rows="10" cols="20" id="description" ng-model="$ctrl.newAd.description"></textarea>
+  <label for="title">Title:</label><input class="pure-input-2-3" type="text" id="title" ng-model="$ctrl.newAd.title" required />
+  <label for="description">Description:</label><textarea class="pure-input-2-3" rows="10" cols="20" id="description" ng-model="$ctrl.newAd.description" required></textarea>
 </fieldset>
 <fieldset class="pure-group">
   <br>
   <label for="item_image">Image URL:</label><input type="url" class="pure-input-2-3" id="item_image" ng-model="$ctrl.newAd.item_image" />
-  <label for="price">Price:</label><input type="number" class="pure-input-2-3" id="price" ng-model="$ctrl.newAd.price" />
+  <label for="price">Price:</label><input type="number" class="pure-input-2-3" id="price" ng-model="$ctrl.newAd.price" required />
 </fieldset>
   <br>
-  <input type="submit" id="create" class="button-success pure-button"/>
+  <input type="submit" id="create" class="button-success pure-button" ng-disabled="newAd.$invalid" />
   <input type="reset" class="button-warning pure-button" />
 </form>
