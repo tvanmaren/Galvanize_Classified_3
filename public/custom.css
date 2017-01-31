@@ -4,8 +4,16 @@ body {
   min-width: 500px;
 }
 
-.back-gray {
-  background-color: rgba(208, 208, 208, 1);
+.background {
+  background-color: #4D5061;
+}
+
+.gray {
+  color: darkgray;
+}
+
+h1 {
+  color: #81A889;
 }
 
 /*Default Pure CSS styling (mostly grid)*/
@@ -53,8 +61,8 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
 
 /*Card Layout*/
 
-.light-gray {
-  background-color: rgba(100, 100, 100, .1);
+.grid-box-color {
+  background-color: #CDD1C4;
 }
 
 .grid-box {
@@ -86,14 +94,21 @@ img {
   text-align: center;
 }
 
-.green {
-  background: rgba(28, 184, 65, .5);
+.nav-color {
+  background: #5C80BC;
 }
 
+.font-white {
+  color: white;
+}
 /*Controls*/
 
 .controls {
   margin-left: 20px;
+}
+
+.label {
+  color: #81A889;
 }
 
 .search-bar {
@@ -102,5 +117,7 @@ img {
 
 .new-button {
   margin-top: 0;
+  padding-right: 0;
   text-align: right;
+  box-sizing: border-box;
 }
