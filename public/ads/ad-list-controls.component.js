@@ -19,9 +19,15 @@
     vm.$onInit = onInit;
 
     function onInit() {
-      vm.sortBy = "date";
       vm.keyword = "";
-      vm.sortOptions = ['date', 'price'];
+      vm.sortOptions = [{
+        name: 'date',
+        value: '-created_at'
+      }, {
+        name: 'price',
+        value: '+price'
+      }];
+      vm.sortBy=vm.sortOptions[0];
     }
 
   }

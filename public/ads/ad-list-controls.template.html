@@ -1,6 +1,7 @@
 <label for="search">Search:</label><input type="search" ng-model="$ctrl.keyword" id="search" /><br>
 <div><label for="order">Sort By:</label>
-  <select ng-model="$ctrl.sortBy" ng-options="item as item for item in $ctrl.sortOptions" name="sort">
+  <select ng-model="$ctrl.sortBy" ng-options="option.name for option in $ctrl.sortOptions" name="sort">
+$ctrl.sortOptions
 
 <br>
 <a ui-sref="new"><button>Write New Ad</button></a>

@@ -3,7 +3,7 @@
 </h1>
 <ad-list-controls keyword="$ctrl.keyword" sort-by="$ctrl.sortBy"></ad-list-controls>
 <ul>
-  <li ng-repeat="item in $ctrl.adArray | orderBy:$ctrl.sortBy:true | filter:$ctrl.textFilter">
+  <li ng-repeat="item in $ctrl.adArray | orderBy:$ctrl.sortBy.value | filter:$ctrl.textFilter">
     <hr>
     <ad-item item="item" delete-item="$ctrl.deleteItem(id)"></ad-item>
   </li>
