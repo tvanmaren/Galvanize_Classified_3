@@ -1,11 +1,13 @@
 <div class="pure-g controls">
-  <div class="pure-u-1 l-box">
-    <span class="search-bar">
+  <div class="l-box">
+    <span class="search-bar pure-u-1">
     <label for="search">Search:</label><input type="search" ng-model="$ctrl.keyword" id="search" />
     <label for="order">Sort By:</label>
     <select ng-model="$ctrl.sortBy" ng-options="option.name for option in $ctrl.sortOptions" name="sort"></select>
   </span>
     <br>
-    <a ui-sref="new" class="pure-button button-success l-box new-button">Write New Ad</a>
+    <span class="pure-u-1 l-box new-button">
+    <a ui-sref="new" class="pure-button button-success">Write New Ad</a>
+  </span>
   </div>
 </div>

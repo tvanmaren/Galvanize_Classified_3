@@ -1,5 +1,9 @@
 /*Body Styles*/
 
+body {
+  min-width: 500px;
+}
+
 .back-gray {
   background-color: rgba(208, 208, 208, 1);
 }
@@ -27,7 +31,6 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
 }
 
 /*Buttons*/
-
 
 .button-success {
   background: rgb(28, 184, 65);
@@ -94,10 +97,10 @@ img {
 }
 
 .search-bar {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .new-button {
-  margin-top: 20px;
-  margin-right: 20px;
+  margin-top: 0;
+  text-align: right;
 }
