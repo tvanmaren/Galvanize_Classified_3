@@ -9,6 +9,7 @@
       templateUrl: '/ads/ad-list-controls.template.html',
       bindings: {
         keyword: '=',
+        sortBy: '=',
       }
     });
 

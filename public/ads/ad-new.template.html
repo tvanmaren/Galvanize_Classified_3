@@ -5,11 +5,12 @@
 <form name="newAd" id="newAd" ng-submit="$ctrl.makeAd()">
   <label for="title">Title:</label><input type="text" id="title" ng-model="$ctrl.newAd.title">
   <br>
-  <label for="description">Description:</label><input type="textfield" id="description" ng-model="$ctrl.newAd.description">
+  <label for="description">Description:</label><input type="textarea" rows="10" cols="20" id="description" ng-model="$ctrl.newAd.description">
   <br>
-  <label for="item_image">Image URL:</label><input type="text" id="item_image" ng-model="$ctrl.newAd.item_image">
+  <label for="item_image">Image URL:</label><input type="url" id="item_image" ng-model="$ctrl.newAd.item_image">
   <br>
-  <label for="price">Price:</label><input type="text" id="price" ng-model="$ctrl.newAd.price">
+  <label for="price">Price:</label><input type="number" id="price" ng-model="$ctrl.newAd.price">
   <br>
   <input type="submit" id="create" />
+  <input type="reset">
 </form>

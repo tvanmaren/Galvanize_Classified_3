@@ -19,14 +19,13 @@
     vm.textFilter = textFilter;
 
     function onInit() {
+      vm.sortBy="date";
       if (adService.adList) {
         vm.adArray = adService.adList;
-        console.log('local ads:', vm.adArray);
       } else {
         adService.getAds()
           .then((ads) => {
             vm.adArray = ads;
-            console.log('ads retrieved:', vm.adArray);
           });
       }
     }
