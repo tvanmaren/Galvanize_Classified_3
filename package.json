@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "test": "mocha",
-    "dev": "gulp"
+    "dev": "gulp",
+    "heroku-prebuild": "knex migrate:rollback",
+    "heroku-postbuild": "knex migrate:latest && knex seed:run"
   },
   "keywords": [],
   "author": "",
