@@ -19,7 +19,6 @@
     vm.textFilter = textFilter;
 
     function onInit() {
-      vm.sortBy="date";
       if (adService.adList) {
         vm.adArray = adService.adList;
       } else {
