@@ -16,13 +16,13 @@
         component: 'adList',
       })
       .state({
-        name: 'ads.new',
-        url: 'new',
+        name: 'new',
+        url: 'ads/new',
         component: 'adNew',
       })
       .state({
-        name: 'ads.edit',
-        url: ':id/edit',
+        name: 'edit',
+        url: 'ads/:id/edit',
         component: 'adEditor',
         params: {
           'id': '0'

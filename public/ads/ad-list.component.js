@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module("app")
+    .module('app')
     .component('adList', {
       controller: adListController,
       controllerAs: '$ctrl',
@@ -11,19 +11,19 @@
 
   adListController.$inject = ['$state', 'adService'];
 
-  function adListController ($state, adService) {
+  function adListController($state, adService) {
     const vm = this;
 
     vm.$onInit = onInit;
-    vm.deleteItem=deleteItem;
+    vm.deleteItem = deleteItem;
 
-    function onInit () {
+    function onInit() {
       console.log(vm);
       adService.getAds()
-      .then((ads) => {
-        vm.adArray = ads;
-        console.log(vm.adArray);
-      });
+        .then((ads) => {
+          vm.adArray = ads;
+          console.log(vm.adArray);
+        });
     }
 
     function deleteItem(itemId) {

@@ -21,7 +21,7 @@
     vm.editItem = editItem;
 
     function editItem() {
-      $state.go('ad.edit', {
+      $state.go('edit', {
         'id': vm.item.id,
       });
     }

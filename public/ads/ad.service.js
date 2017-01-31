@@ -3,11 +3,11 @@
 
   angular
     .module("app")
-    .service('adService', service);
+    .service('adService', adService);
 
-  service.$inject = ['$http'];
+  adService.$inject = ['$http'];
 
-  function service($http) {
+  function adService($http) {
     const service = this;
 
     service.getAds = getAds;

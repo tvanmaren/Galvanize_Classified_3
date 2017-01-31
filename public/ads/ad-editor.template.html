@@ -1,0 +1,15 @@
+<h1>
+  Update Your Ad:
+</h1>
+<br>
+<form name="currentAd" id="currentAd" ng-submit="$ctrl.updateAd()">
+  <label for="title">Title:</label><input type="text" id="title" ng-model="$ctrl.currentAd.title" placeholder="{{$ctrl.currentAdData.title}}">
+  <br>
+  <label for="description">Description:</label><input type="textfield" id="description" ng-model="$ctrl.currentAd.description" placeholder="{{$ctrl.currentAdData.description}}">
+  <br>
+  <label for="item_image">Image URL:</label><input type="text" id="item_image" ng-model="$ctrl.currentAd.item_image" placeholder="{{$ctrl.currentAdData.item_image}}">
+  <br>
+  <label for="price">Price:</label><input type="text" id="price" ng-model="$ctrl.currentAd.price" placeholder="{{$ctrl.currentAdData.price}}">
+  <br>
+  <input type="submit" id="update">
+</form>
