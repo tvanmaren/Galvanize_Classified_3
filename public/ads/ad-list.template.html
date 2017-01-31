@@ -1,10 +1,11 @@
 <h1>
   Classified Ads:
 </h1>
+<br>
 <ad-list-controls keyword="$ctrl.keyword" sort-by="$ctrl.sortBy"></ad-list-controls>
-<ul>
-  <li ng-repeat="item in $ctrl.adArray | orderBy:$ctrl.sortBy.value | filter:$ctrl.textFilter">
-    <hr>
+<br>
+<div class="pure-g">
+  <div class="l-box" ng-repeat="item in $ctrl.adArray | orderBy:$ctrl.sortBy.value | filter:$ctrl.textFilter">
     <ad-item item="item" delete-item="$ctrl.deleteItem(id)"></ad-item>
-  </li>
-</ul>
+  </div>
+</div>
