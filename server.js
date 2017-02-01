@@ -13,6 +13,8 @@ app.use('/classifieds', messages);
 
 app.use('/angular', express.static(path.join(__dirname, '/node_modules/angular/angular.min.js')));
 app.use('/angular-ui-router', express.static(path.join(__dirname, '/node_modules/angular-ui-router/release/angular-ui-router.min.js')));
+app.use('/font-awesome', express.static(path.join(__dirname, '/node_modules/font-awesome/css/font-awesome.min.css')));
+app.use('/roboto-fontface', express.static(path.join(__dirname, '/node_modules/roboto-fontface/css/roboto/roboto-fontface.css')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('*', (req, res) => {
