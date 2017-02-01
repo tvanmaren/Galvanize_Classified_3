@@ -10,12 +10,14 @@
     "start": "node server.js",
     "test": "mocha",
     "dev": "gulp",
+    "heroku-prebuild": "knex migrate:rollback",
     "heroku-postbuild": "knex migrate:latest && knex seed:run"
   },
   "keywords": [],
   "author": "",
   "description": "",
   "dependencies": {
+    "angular": "^1.6.1",
     "angular-ui-router": "^1.0.0-rc.1",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
