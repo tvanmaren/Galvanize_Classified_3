@@ -1,3 +1,5 @@
+# WARNING: Be sure to disable any ad-blocking software, or the site will not load
+
 # Galvanize Classified - Part 3
 
 ## Read the entire README before beginning. Commit often.
