@@ -14,9 +14,17 @@ body {
 
 h1 {
   color: #81A889;
+  font-size: 3em;
 }
 
+h2 {
+  font-size: 1.75em;
+  margin: 2%
+}
+
+
 /*Default Pure CSS styling (mostly grid)*/
+
 .l-box {
   padding: 1em;
 }
@@ -28,7 +36,7 @@ h1 {
 }
 
 html, button, input, select, textarea, .pure-g [class *="pure-u"] {
-  /* Set your content font stack here: */
+  /* Set the content font stack here: */
   font-family: Roboto;
 }
 
@@ -37,6 +45,7 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
+
 
 /*Buttons*/
 
@@ -59,37 +68,9 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
   background: rgba(66, 184, 221, .75);
 }
 
-/*Card Layout*/
-
-.grid-box-color {
-  background-color: #CDD1C4;
-}
-
-.grid-box {
-  height: 600px;
-  width: 400px;
-}
-
-img {
-  min-height: 300px;
-  min-width: 200px;
-  max-height: 400px;
-  max-width: 300px;
-  overflow: hidden;
-}
-
-.title {
-  min-width: 400px;
-  overflow: scroll;
-}
-
-.description {
-  min-height: 100px;
-  min-width: 250px;
-  overflow: scroll;
-}
 
 /*Nav Menu*/
+
 .center {
   text-align: center;
 }
@@ -101,6 +82,8 @@ img {
 .font-white {
   color: white;
 }
+
+
 /*Controls*/
 
 .controls {
@@ -120,4 +103,152 @@ img {
   padding-right: 0;
   text-align: right;
   box-sizing: border-box;
+}
+
+
+/*Card Layout*/
+
+.title {
+  width: 100%;
+  overflow: scroll;
+}
+
+.grid-box-color {
+  background-color: #CDD1C4;
+}
+
+.grid-box {
+  height: 600px;
+  width: 400px;
+}
+
+.head-container {
+  height: 20%;
+  width: 100%;
+}
+
+.content-container {
+  height: 66.6%;
+  width: 100%;
+  text-align: center;
+}
+
+br {
+  height: 0;
+}
+
+img {
+  max-width: 90%;
+  max-height: 70%;
+  width: auto;
+}
+
+.description {
+  margin-top: 5px;
+  margin-bottom: 0;
+  height: 33.3%;
+  width: 100%;
+  text-align: left;
+  overflow: scroll;
+}
+
+.button-container {
+  height: 13.3%;
+  width: 100%;
+}
+
+@media (max-width:767px) {
+  .grid-box {
+    height: 600px;
+    width: 400px;
+  }
+  .head-container {
+    max-height: 120px;
+    font-size: 3vmin;
+  }
+  .content-container {
+    height: 400px;
+  }
+  img {
+    max-height: 300px;
+  }
+  .description {
+    min-height: 16.6%;
+    max-height: 100px;
+  }
+  .button-container {
+    max-height: 79px;
+  }
+}
+
+@media (min-width:768px) {
+  img {
+    max-height: 210px;
+  }
+  .grid-box {
+    height: 460px;
+    width: 260px;
+  }
+  .head-container {
+    max-height: 92px;
+    font-size: 2vmin;
+  }
+  .description {
+    min-height: 16.6%;
+    max-height: 76.6px;
+  }
+  .content-container {
+    height: 306.3px;
+  }
+  .button-container {
+    max-height: 61px;
+  }
+}
+
+@media (min-width:992px) {
+  img {
+    max-height: 284px;
+  }
+  .grid-box {
+    height: 534px;
+    width: 334px;
+  }
+  .head-container {
+    max-height: 106px;
+    font-size: 2.5vmin;
+  }
+  .description {
+    min-height: 16.6%;
+    max-height: 89px;
+  }
+  .content-container {
+    height: 355.6px;
+  }
+  .button-container {
+    max-height: 71px;
+  }
+}
+
+@media (min-width:1200px) {
+  img {
+    max-height: 300px;
+  }
+  .grid-box {
+    height: 600px;
+    width: 400px;
+  }
+  .head-container {
+    max-height: 120px;
+    font-size: 3vmin;
+  }
+  .description {
+    min-height: 16.6%;
+    max-height: 100px;
+  }
+  .content-container {
+    height: 400px;
+  }
+  .button-container {
+    max-height: 79px;
+  }
 }
