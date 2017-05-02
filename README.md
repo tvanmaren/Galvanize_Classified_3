@@ -1,42 +1,38 @@
-# WARNING: Be sure to disable any ad-blocking software, or the site will not load
-
 # Galvanize Classified
+
+## Deployment
+
+View the app at http://tvanmaren-classifieds.herokuapp.com/
+### WARNING: Be sure to disable any ad-blocking software, or the site will not load
 
 ## Project Description
 
-The app is a simple classified ad posting board.
+This app is a simple classified ad posting board.
 
 ### Requirements
 
-You are responsible for:
+I was responsible for:
 
-- [ ] Forking and cloning this GitHub Repo.
 - [ ] Creating the test and development databases locally.
 - [ ] Creating the database migration.
 - [ ] Creating the database seed data.
 - [ ] Creating the RESTful API to handle classified resource.
-- [ ] Deployment of the API on Heroku.
-
-You are responsible for:
-
-- [ ] Styling your Angular front end.
-- [ ] Deployment of the App on Heroku.
+- [ ] Creating a simple Angular front end.
+- [ ] Deployment of the App & API on Heroku.
+- [ ] Styling the Angular front end.
 
 ### Must haves
 
-The app should implement the following:
+The app implements the following:
 
 - Valid, well-implemented HTML and CSS
 - Readable and logical JavaScript
 - Responsiveness for different screen sizes and orientations
 - A logical and intuitive UI
 
-- [ ] Creating a simple Angular front end.
-- [ ] Deployment of the App on Heroku.
-
 ### Functionality
 
-The app should do the following:
+This app provides the following services:
 
 - Display all of the ads
 - Post a new ad
@@ -47,15 +43,11 @@ The app should do the following:
 
 ### Tests
 
-We have provided tests to help you build the database migrations, seeds and routes.  *Use them.* If you are unsure of what the test is asking for, open the test and read it. You can ask an instructor for test clarifications.
+Our instructors provided tests to help build the database migrations, seeds and routes. As they oversimplified some API expectations, I had to customize and readjust the tests during the front-end phase.
 
-At the command line type `npm test` to run the tests.
+### Given Object
 
-**TIP: When testing your migrations you may need to drop and recreate your database before running the test so that your migration changes are reflected in the database.**
-
-### Classified Object
-
-You need to create routes, seed data and migrations for the following object.
+I built routes, seed data and migrations for the following object:
 
 ```javascript
 [{
