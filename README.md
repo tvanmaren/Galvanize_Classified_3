@@ -67,7 +67,7 @@ I built routes, seed data and migrations for the following object:
 
 ```text
 ┌──────────────────────────────────────────────────────────────────────────────────────────┐
-│                                          classified                                       │
+│                                          classified                                      │
 ├─────────────┬─────────────────────────┬──────────────────────────────────────────────────┤
 │id           │serial                   │primary key                                       │
 |title        │varchar(255)             │not null                                          │
