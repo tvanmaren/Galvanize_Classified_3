@@ -1,22 +1,12 @@
+
 # WARNING: Be sure to disable any ad-blocking software, or the site will not load
 
-# Galvanize Classified - Part 3
-
-## Read the entire README before beginning. Commit often.
-
-## Project Description
-
-Now is your time to show off and make your Angular app pretty.
-
-### Getting Started
-
-Copy your files from **Part 2** into your project directory.  This is important: make sure you don't edit the part 2 files so we can evaluate each part independently.  This also allows you to redo pieces of this assessment individually.
+# Galvanize Classified
 
 ### Requirements
 
 You are responsible for:
 
-- [ ] Forking and cloning this GitHub Repo.
 - [ ] Styling your Angular front end.
 - [ ] Deployment of the App on Heroku.
 
@@ -29,16 +19,16 @@ The app should implement the following:
 - Responsiveness for different screen sizes and orientations
 - A logical and intuitive UI
 
-# Tips
+- [ ] Creating a simple Angular front end.
+- [ ] Deployment of the App on Heroku.
 
-> *Simplicity is the ultimate sophistication*.
->
-> — Leonardo da Vinci 
+### Functionality
 
-> *Everything should be made as **simple as possible**, **but no simpler**.*
->
-> — Albert Einstein
+The app should do the following:
 
-> *"Picasso had a saying -- 'good artists copy; great artists steal' -- and we have always been shameless about stealing great ideas."*
->
-> — Steve Jobs
+- Display all of the ads
+- Post a new ad
+- Edit existing ads
+- Delete an ad
+- Filter ads (titles and descriptions)
+- Sort ads based on posting date and price
