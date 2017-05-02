@@ -1,8 +1,6 @@
 # Galvanize Classified
 
-## Deployment
-
-View the app at http://tvanmaren-classifieds.herokuapp.com/
+## Deployment: http://tvanmaren-classifieds.herokuapp.com/
 ### WARNING: Be sure to disable any ad-blocking software, or the site will not load
 
 ## Project Description
