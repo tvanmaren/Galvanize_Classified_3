@@ -146,10 +146,11 @@ img {
 }
 
 .description {
+  padding: 0 0 0 10px;
   margin-top: 5px;
   margin-bottom: 0;
   height: 33.3%;
-  width: 100%;
+  width: 95%;
   text-align: left;
   overflow: scroll;
 }
