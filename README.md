@@ -11,37 +11,29 @@ This app is a simple classified ad posting board.
 
 I was responsible for:
 
-- [ ] Creating the test and development databases locally.
-- [ ] Creating the database migration.
-- [ ] Creating the database seed data.
-- [ ] Creating the RESTful API to handle classified resource.
-- [ ] Creating a simple Angular front end.
-- [ ] Deployment of the App & API on Heroku.
+- [ ] Creating the database, including migration & seed data.
+- [ ] Creating the RESTful API back end.
+- [ ] Crafting a logical and intuitive UI
 - [ ] Styling the Angular front end.
-
-### Must haves
-
-The app implements the following:
-
-- Valid, well-implemented HTML and CSS
-- Readable and logical JavaScript
-- Responsiveness for different screen sizes and orientations
-- A logical and intuitive UI
+- [ ] Writing valid, well-implemented HTML and CSS
+- [ ] Including responsiveness for different screen sizes and orientations
+- [ ] Writing readable and logical JavaScript
+- [ ] Deploying the App & API to Heroku.
 
 ### Functionality
 
 This app provides the following services:
 
-- Display all of the ads
+- View all ads
 - Post a new ad
 - Edit existing ads
 - Delete an ad
-- Filter ads (titles and descriptions)
+- Filter ads by title/description
 - Sort ads based on posting date and price
 
 ### Tests
 
-Our instructors provided tests to help build the database migrations, seeds and routes. As they oversimplified some API expectations, I had to customize and readjust the tests during the front-end phase.
+I was provided tests from which to build the appropriate database migrations, seeds and routes. As the tests' expectations of the API were oversimplified, I customized and readjusted the tests during the front-end phase.
 
 ### Given Object
 
