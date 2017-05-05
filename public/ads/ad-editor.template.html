@@ -4,12 +4,12 @@
 <br>
 <form class="pure-form" name="currentAd" id="currentAd" ng-submit="$ctrl.updateAd()">
   <fieldset class="pure-group">
-    <label for="title" class="gray">Title:</label><input type="text" class="pure-input-2-3" id="title" ng-model="$ctrl.currentAd.title" placeholder="{{$ctrl.currentAdData.title}}" required />
-    <label for="description" class="gray">Description:</label><textarea class="pure-input-2-3" rows="10" cols="20" id="description" ng-model="$ctrl.currentAd.description" placeholder="{{$ctrl.currentAdData.description}}" required></textarea>
+    <label for="title" class="darkgray">Title:</label><input type="text" class="pure-input-2-3" id="title" ng-model="$ctrl.currentAd.title" placeholder="{{$ctrl.currentAdData.title}}" required />
+    <label for="description" class="darkgray">Description:</label><textarea class="pure-input-2-3" rows="10" cols="20" id="description" ng-model="$ctrl.currentAd.description" placeholder="{{$ctrl.currentAdData.description}}" required></textarea>
   </fieldset>
   <fieldset class="pure-group">
-    <label for="item_image" class="gray">Image URL:</label><input type="url" class="pure-input-2-3" id="item_image" ng-model="$ctrl.currentAd.item_image" placeholder="{{$ctrl.currentAdData.item_image}}" required />
-    <label for="price" class="gray">Price:</label><input type="number" class="pure-input-2-3" id="price" ng-model="$ctrl.currentAd.price" placeholder="{{$ctrl.currentAdData.price}}" required />
+    <label for="item_image" class="darkgray">Image URL:</label><input type="url" class="pure-input-2-3" id="item_image" ng-model="$ctrl.currentAd.item_image" placeholder="{{$ctrl.currentAdData.item_image}}" required />
+    <label for="price" class="darkgray">Price:</label><input type="number" class="pure-input-2-3" id="price" ng-model="$ctrl.currentAd.price" placeholder="{{$ctrl.currentAdData.price}}" required />
   </fieldset>
   <input type="submit" class="pure-button button-success" id="update" ng-disabled="currentAd.$invalid" />
 </form>

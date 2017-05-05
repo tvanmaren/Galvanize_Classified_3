@@ -5,7 +5,7 @@ body {
 }
 
 .background {
-  background-color: #b0b2ba;
+  background-color: #e1e2e8;
 }
 
 .gray {
@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  color: #81A889;
+  /*color: #5b7f63;*/
   font-size: 3em;
 }
 
@@ -91,7 +91,7 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
 }
 
 .label {
-  color: #81A889;
+  /*color: #5b7f63;*/
 }
 
 .search-bar {
@@ -114,12 +114,13 @@ html, button, input, select, textarea, .pure-g [class *="pure-u"] {
 }
 
 .grid-box-color {
-  background-color: #CDD1C4;
+  background-color: silver;
 }
 
 .grid-box {
   height: 600px;
   width: 400px;
+  box-shadow: -3px 3px 25px #888888;
 }
 
 .head-container {
