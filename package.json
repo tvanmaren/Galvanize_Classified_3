@@ -2,7 +2,7 @@
   "name": "galvanize-classified-ad",
   "version": "1.0.0",
   "engines": {
-    "node": "v7.0.0"
+    "node": "v7.10.1"
   },
   "main": "server.js",
   "license": "MIT",
